@@ -3,6 +3,24 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import { createGlobalStyle } from 'styled-components'
 
+const fontRules = `
+  @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:ital,wght@0,900;1,700&display=swap');
+
+  html {
+    font-size: 16px;
+  }
+  
+  *:not(html) {
+    font-family: 'Barlow', sans-serif;
+    font-size: 1rem;
+  } 
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Fraunces', serif;
+  }
+
+`
+
 const cssReset = `
 /* Box sizing rules */
 *,
@@ -48,6 +66,8 @@ img, picture {
 input, button, textarea, select {
   font: inherit;
 }
+
+${fontRules}
 `
 
 const GlobalStyle = createGlobalStyle`
