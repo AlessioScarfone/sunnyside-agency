@@ -4,7 +4,7 @@ import Main from './components/Main';
 
 function App() {
   return (
-    <main>
+    <main style={{width: "100vw"}}>
       <Navbar/>
       <Main />
     </main>

@@ -15,7 +15,7 @@ const MediaImgSmall = styled.img<{mediaSize?: number}>`
     display: block;
   }
   width: 100%; 
-  object-fit: contain;
+  object-fit: fill;
 `;
 
 const MediaImgBig = styled.img<{mediaSize?: number}>`
@@ -24,7 +24,7 @@ const MediaImgBig = styled.img<{mediaSize?: number}>`
     display: block;
   }
   width: 100%; 
-  object-fit: contain;
+  object-fit: fill;
 `;
 
 const ResponsiveImage = ({

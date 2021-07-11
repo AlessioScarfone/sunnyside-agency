@@ -6,6 +6,9 @@ import { flexRowCenter } from "../utils/StyleConst";
 const LogoWrap = styled.div`
   ${flexRowCenter}
   width: 30%;
+  @media (max-width: 768px) {
+    width: 70%;
+  }
 `;
 
 const HamburgerButton = styled.button`
@@ -22,7 +25,8 @@ const Nav = styled.header`
   justify-content: space-between;
   padding: 1.2rem 2rem;
   position: absolute;
-  width: 100%;
+  left: 0;
+  right: 0;
 `;
 
 const Menu = styled.div`
@@ -62,7 +66,7 @@ const Navbar = () => {
   return (
     <Nav>
       <LogoWrap>
-        <Logo />
+        <Logo/>
       </LogoWrap>
       <Menu>
         <MenuItem>About</MenuItem>

@@ -1,38 +1,52 @@
 import React from "react";
 import ResponsiveImage from "./reusable/ResponsiveImage";
-import { HeaderImg } from "./reusable/Images";
+import { HeaderImg, ArrowDownIcon } from "./reusable/Images";
 import styled from "styled-components";
+import { flexColumnCenter } from "../utils/StyleConst";
+import GridSection from './GridSection'; 
+
+const FloatTitleContainer = styled.div`
+  ${flexColumnCenter}
+  width: 100%;
+  position: absolute;
+  top: 4.5rem;
+`;
 
 const FloatTitle = styled.h1`
-position: absolute;
-color: var(--white);
-font-family: 'Fraunces', serif;
-font-size: 1.2rem;
-width: 100%;
-padding: 1.5rem;
-text-align: center;
-font-weight: 900;
-letter-spacing: 4px;
-top: 4rem;
+  color: var(--white);
+  font-family: "Fraunces", serif;
+  font-size: clamp(1.8rem, 8vw - 2rem, 3rem);
+  width: 100%;
+  padding: 1.5rem;
+  text-align: center;
+  font-weight: 900;
+  letter-spacing: 4px;
+`;
 
+const StyledArrowDownIcon = styled(ArrowDownIcon)`
+  position: relative;
+  top: 4rem;
 
-@media (min-width: 768px) {
-    font-size: 3rem;
-    top: 6rem;
-}
+  @media (mix-width: 367px) {
+    transform: scale(1.3);
+  }
 `
 
 const Main = () => {
-
   return (
     <section>
-      <FloatTitle>WE ARE CREATIVES</FloatTitle>
-      <div style={{width:"100vw"}}>
+      <FloatTitleContainer>
+        <FloatTitle> WE ARE CREATIVES </FloatTitle>
+        <StyledArrowDownIcon />
+      </FloatTitleContainer>
+
+      <div>
         <ResponsiveImage
           smallSrc={HeaderImg.smallSrc}
           largeSrc={HeaderImg.largeSrc}
         />
       </div>
+      <GridSection/>
     </section>
   );
 };
