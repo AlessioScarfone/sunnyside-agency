@@ -1,11 +1,13 @@
 import React from 'react';
+import Navbar from './components/Navbar';
+import Main from './components/Main';
 
 function App() {
   return (
-    <div className="App">
-     <h1>APP</h1>
-     <p>cioa</p>
-    </div>
+    <main>
+      <Navbar/>
+      <Main />
+    </main>
   );
 }
 
