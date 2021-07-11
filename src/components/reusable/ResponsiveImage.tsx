@@ -30,13 +30,14 @@ const MediaImgBig = styled.img<{mediaSize?: number}>`
 const ResponsiveImage = ({
   smallSrc,
   largeSrc,
+  mediaSize = 768,
   alt = "img",
 }: ResponsiveImageProps) => {
 
   return (
     <>
-      <MediaImgSmall src={smallSrc} alt={alt} mediaSize={768}/>
-      <MediaImgBig src={largeSrc} alt={alt} mediaSize={768}/>
+      <MediaImgSmall src={smallSrc} alt={alt} mediaSize={mediaSize}/>
+      <MediaImgBig src={largeSrc} alt={alt} mediaSize={mediaSize}/>
     </>
 
     // <picture>

@@ -1,12 +1,22 @@
 import React from "react";
 import styled from "styled-components";
-import { Logo } from "./Images";
+import { Logo, Hamburger } from "./reusable/Images";
 import { flexRowCenter } from "../utils/StyleConst";
 
 const LogoWrap = styled.div`
   ${flexRowCenter}
-  max-width: 50%;
+  width: 30%;
 `;
+
+const HamburgerButton = styled.button`
+  @media (min-width: 768px) {
+    display: none;
+  }
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+`;
+
 const Nav = styled.header`
   ${flexRowCenter}
   justify-content: space-between;
@@ -17,6 +27,9 @@ const Nav = styled.header`
 
 const Menu = styled.div`
   ${flexRowCenter}
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const MenuItem = styled.h4<{ selected?: boolean }>`
@@ -42,6 +55,10 @@ const MenuItem = styled.h4<{ selected?: boolean }>`
 
 //TODO: mobile menu
 const Navbar = () => {
+  const openMobileMenu = () => {
+    console.log("OPEN MOBILE MENU");
+  };
+
   return (
     <Nav>
       <LogoWrap>
@@ -53,6 +70,9 @@ const Navbar = () => {
         <MenuItem>Projects</MenuItem>
         <MenuItem selected={true}>Contact</MenuItem>
       </Menu>
+      <HamburgerButton onClick={openMobileMenu}>
+        <Hamburger />
+      </HamburgerButton>
     </Nav>
   );
 };
