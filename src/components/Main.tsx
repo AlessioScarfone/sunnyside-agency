@@ -1,12 +1,14 @@
 import React from "react";
 import ResponsiveImage from "./reusable/ResponsiveImage";
-import { HeaderImg, ArrowDownIcon } from "./reusable/Images";
-import styled from "styled-components";
-import { flexColumnCenter } from "../utils/StyleConst";
-import GridSection from './GridSection'; 
+import { headerImg, ArrowDownIcon } from "./reusable/Images";
+import styled from 'styled-components/macro';
+import GridSection from "./GridSection";
+import Navbar from "./Navbar";
 
 const FloatTitleContainer = styled.div`
-  ${flexColumnCenter}
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
   position: absolute;
   top: 4.5rem;
@@ -30,24 +32,27 @@ const StyledArrowDownIcon = styled(ArrowDownIcon)`
   @media (mix-width: 367px) {
     transform: scale(1.3);
   }
-`
+`;
 
 const Main = () => {
   return (
-    <section>
-      <FloatTitleContainer>
-        <FloatTitle> WE ARE CREATIVES </FloatTitle>
-        <StyledArrowDownIcon />
-      </FloatTitleContainer>
+    <>
+      <Navbar />
+      <main>
+        <FloatTitleContainer>
+          <FloatTitle> WE ARE CREATIVES </FloatTitle>
+          <StyledArrowDownIcon />
+        </FloatTitleContainer>
 
-      <div>
-        <ResponsiveImage
-          smallSrc={HeaderImg.smallSrc}
-          largeSrc={HeaderImg.largeSrc}
-        />
-      </div>
-      <GridSection/>
-    </section>
+        <div>
+          <ResponsiveImage
+            smallSrc={headerImg.smallSrc}
+            largeSrc={headerImg.largeSrc}
+          />
+        </div>
+        <GridSection />
+      </main>
+    </>
   );
 };
 

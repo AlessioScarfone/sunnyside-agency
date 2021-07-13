@@ -1,10 +1,10 @@
 import React from "react";
-import styled from "styled-components";
+import styled from 'styled-components/macro';
 import { Logo, Hamburger } from "./reusable/Images";
-import { flexRowCenter } from "../utils/StyleConst";
 
 const LogoWrap = styled.div`
-  ${flexRowCenter}
+  display: flex;
+  align-items: center;
   width: 30%;
   @media (max-width: 768px) {
     width: 70%;
@@ -21,7 +21,8 @@ const HamburgerButton = styled.button`
 `;
 
 const Nav = styled.header`
-  ${flexRowCenter}
+  display: flex;
+  align-items: center;
   justify-content: space-between;
   padding: 1.2rem 2rem;
   position: absolute;
@@ -30,7 +31,8 @@ const Nav = styled.header`
 `;
 
 const Menu = styled.div`
-  ${flexRowCenter}
+  display: flex;
+  align-items: center;
   @media (max-width: 768px) {
     display: none;
   }

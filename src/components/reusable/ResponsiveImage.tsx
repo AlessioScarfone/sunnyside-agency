@@ -1,7 +1,7 @@
 import React from "react";
-import styled from "styled-components";
+import styled from 'styled-components/macro';
 
-interface ResponsiveImageProps {
+export interface ResponsiveImageProps {
   smallSrc: string;
   largeSrc?: string;
   mediaSize?: number;

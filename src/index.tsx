@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components/macro';
 
 const globalRules = `
 
@@ -20,6 +20,10 @@ const globalRules = `
 
   html {
     font-size: 16px;
+  }
+
+  body {
+    width: 100%;
   }
   
   * {
