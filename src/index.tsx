@@ -19,6 +19,7 @@ const globalRules = `
   }
 
   html {
+    // 1rem = 16px
     font-size: 16px;
   }
 

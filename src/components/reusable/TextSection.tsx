@@ -15,6 +15,7 @@ const Container = styled.div<{ linkColor?: string }>`
   padding: 3rem;
   max-width: 100%;
   text-align: center;
+  min-height: 350px;
 
   h1 {
     font-size: 2rem;

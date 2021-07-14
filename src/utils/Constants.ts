@@ -1,3 +1,5 @@
+import { imgEmily, imgJennie, imgThomas } from '../components/reusable/Images';
+
 export const textSectionData: Array<{ title: string, text: string, link?: string }> = [
     {
         title: "Transform your brand",
@@ -17,4 +19,28 @@ export const textSectionData: Array<{ title: string, text: string, link?: string
         title: "Photography",
         text: "Increase your credibility by getting the most stunning, high-quality photos that improve your business image."
     },
+]
+
+export const testimonialData: Array<{ id: string, image: any, text: string, name: string, desc: string }> = [
+    {
+        id: 'emily',
+        image: imgEmily,
+        text: "We put our trust in Creative and they delivered, making sure our needs were met and deadlines were always hit.",
+        name: "Emily R.",
+        desc: "Marketing Director"
+    },
+    {
+        id: 'jennie',
+        image: imgJennie,
+        text: "Incredible end result! Our sales increased over 400% when we worked with Creative. Highly recommended!",
+        name: "Jennie F.",
+        desc: "Business Owner"
+    },
+    {
+        id: 'thomas',
+        image: imgThomas,
+        text: "Creative’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.",
+        name: "Thomas S.",
+        desc: "Chief Operating Officer"
+    }
 ]

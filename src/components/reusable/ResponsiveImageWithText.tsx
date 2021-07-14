@@ -19,7 +19,7 @@ const Title = styled.h2<{ textColor: string }>`
   text-align: center;
   bottom: 30%;
   font-size: 1.7rem;
-  padding: 2rem;
+  padding: 1.5rem 2rem;
   color: var(${(props) => props.textColor}, hsl(212, 27%, 19%));
 `;
 
