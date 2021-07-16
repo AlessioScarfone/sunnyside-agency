@@ -20,9 +20,18 @@ import designImgSm from "../../assets/images/mobile/image-graphic-design.jpg";
 import orangeImgLg from "../../assets/images/desktop/image-photography.jpg";
 import orangeImgSm from "../../assets/images/mobile/image-photography.jpg";
 
-import imgEmily from '../../assets/images/image-emily.jpg';
-import imgJennie from '../../assets/images/image-jennie.jpg';
-import imgThomas from '../../assets/images/image-thomas.jpg';
+import imgEmily from "../../assets/images/image-emily.jpg";
+import imgJennie from "../../assets/images/image-jennie.jpg";
+import imgThomas from "../../assets/images/image-thomas.jpg";
+
+import imgGalleryConeSm from "../../assets/images/mobile/image-gallery-cone.jpg";
+import imgGalleryConeLg from "../../assets/images/desktop/image-gallery-cone.jpg";
+import imgGalleryOrangeSm from "../../assets/images/mobile/image-gallery-orange.jpg";
+import imgGalleryOrangeLg from "../../assets/images/desktop/image-gallery-orange.jpg";
+import imgGalleryMilkBottleSm from "../../assets/images/mobile/image-gallery-milkbottles.jpg";
+import imgGalleryMilkBottleLg from "../../assets/images/desktop/image-gallery-milkbottles.jpg";
+import imgGallerySugarCubeSm from "../../assets/images/mobile/image-gallery-sugar-cubes.jpg";
+import imgGallerySugarCubeLg from "../../assets/images/desktop/image-gallery-sugar-cubes.jpg";
 
 class ImageSrc {
   smallSrc: string;
@@ -40,6 +49,15 @@ const glassImg = new ImageSrc(glassImgSm, glassImgLg);
 const designImg = new ImageSrc(designImgSm, designImgLg);
 const orangeImg = new ImageSrc(orangeImgSm, orangeImgLg);
 
+const galleryImgs: Array<ImageSrc> = [
+  new ImageSrc(imgGalleryConeSm, imgGalleryConeLg),
+  new ImageSrc(imgGalleryOrangeSm, imgGalleryOrangeLg),
+  new ImageSrc(imgGalleryMilkBottleSm, imgGalleryMilkBottleLg),
+  new ImageSrc(imgGallerySugarCubeSm, imgGallerySugarCubeLg),
+];
+
+const socialIcons = [FacebookIcon, InstagramIcon, TwitterIcon, PinterestIcon];
+
 export {
   Logo,
   headerImg,
@@ -47,6 +65,7 @@ export {
   glassImg,
   designImg,
   orangeImg,
+  galleryImgs,
   // --- Testimonial --
   imgEmily,
   imgJennie,
@@ -58,4 +77,5 @@ export {
   InstagramIcon,
   TwitterIcon,
   ArrowDownIcon,
+  socialIcons,
 };

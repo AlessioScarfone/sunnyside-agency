@@ -1,9 +1,10 @@
-import React from "react";
-import ResponsiveImage from "./reusable/ResponsiveImage";
-import { headerImg, ArrowDownIcon } from "./reusable/Images";
+import React from 'react';
+import ResponsiveImage from './reusable/ResponsiveImage';
+import { headerImg, ArrowDownIcon } from './reusable/Images';
 import styled from 'styled-components/macro';
-import GridSection from "./GridSection";
-import Navbar from "./Navbar";
+import GridSection from './GridSection';
+import Navbar from './Navbar';
+import Footer from './Footer';
 
 const FloatTitleContainer = styled.div`
   display: flex;
@@ -16,7 +17,7 @@ const FloatTitleContainer = styled.div`
 
 const FloatTitle = styled.h1`
   color: var(--white);
-  font-family: "Fraunces", serif;
+  font-family: 'Fraunces', serif;
   font-size: clamp(1.8rem, 8vw - 2rem, 3rem);
   width: 100%;
   padding: 1.5rem;
@@ -52,6 +53,7 @@ const Main = () => {
         </div>
         <GridSection />
       </main>
+      <Footer />
     </>
   );
 };

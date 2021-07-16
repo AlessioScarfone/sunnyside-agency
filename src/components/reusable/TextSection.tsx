@@ -6,11 +6,13 @@ interface TextSectionProps {
   text: string;
   linkText?: string;
   linkColor?: string; //css variable string
+  className?: string, //user for styled component extend
 }
 
 const Container = styled.div<{ linkColor?: string }>`
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   padding: 3rem;
   max-width: 100%;
@@ -53,9 +55,10 @@ const TextSection = ({
   text,
   linkText = "Learn more",
   linkColor = "--yellow",
+  className,
 }: TextSectionProps) => {
   return (
-    <Container linkColor={linkColor}>
+    <Container linkColor={linkColor} className={className}>
       <h1>{title}</h1>
       <p>{text}</p>
       <span>{linkText}</span>
