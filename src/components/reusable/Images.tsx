@@ -56,8 +56,6 @@ const galleryImgs: Array<ImageSrc> = [
   new ImageSrc(imgGallerySugarCubeSm, imgGallerySugarCubeLg),
 ];
 
-const socialIcons = [FacebookIcon, InstagramIcon, TwitterIcon, PinterestIcon];
-
 export {
   Logo,
   headerImg,
@@ -77,5 +75,4 @@ export {
   InstagramIcon,
   TwitterIcon,
   ArrowDownIcon,
-  socialIcons,
 };
