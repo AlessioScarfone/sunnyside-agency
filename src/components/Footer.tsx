@@ -16,9 +16,7 @@ const StyledFooter = styled.footer`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-`;
 
-const StyledCyanIconWrapper = styled.div`
   svg path {
     fill: var(--darkCyan);
   }
@@ -29,15 +27,15 @@ const LinkRowContainer = styled.div`
   justify-content: space-between;
   width: 100%;
   padding: 2rem 1rem 1rem 1rem;
-  max-width: 100%;
+  max-width: 90%;
 
-  @media (min-width: 770px) {
-    max-width: 30%;
+  @media (min-width: 700px) {
+    max-width: 40%;
   }
-`;
 
-const FooterLink = styled.p`
-  color: var(--darkCyan)
+  p {
+    color: var(--darkCyan);
+  }
 `;
 
 const IconRowContainer = styled.div`
@@ -45,35 +43,31 @@ const IconRowContainer = styled.div`
   justify-content: space-evenly;
   width: 100%;
   padding-top: 3rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  max-width: 100%;
+  max-width: 90%;
 
-  @media (min-width: 770px) {
-    max-width: 30%;
+  @media (min-width: 700px) {
+    max-width: 40%;
   }
 `;
 
 const Footer = () => {
   return (
-    <StyledCyanIconWrapper>
-      <StyledFooter>
-        <Logo />
+    <StyledFooter>
+      <Logo />
 
-        <LinkRowContainer>
-          <FooterLink>About</FooterLink>
-          <FooterLink>Services</FooterLink>
-          <FooterLink>Projects</FooterLink>
-        </LinkRowContainer>
+      <LinkRowContainer>
+        <p>About</p>
+        <p>Services</p>
+        <p>Projects</p>
+      </LinkRowContainer>
 
-        <IconRowContainer>
-          <FacebookIcon />
-          <InstagramIcon />
-          <TwitterIcon />
-          <PinterestIcon />
-        </IconRowContainer>
-      </StyledFooter>
-    </StyledCyanIconWrapper>
+      <IconRowContainer>
+        <FacebookIcon />
+        <InstagramIcon />
+        <TwitterIcon />
+        <PinterestIcon />
+      </IconRowContainer>
+    </StyledFooter>
   );
 };
 

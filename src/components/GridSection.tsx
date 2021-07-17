@@ -56,6 +56,7 @@ const TestimonialSectionTitle = styled.h2`
 
 const ImageGallery = styled.div`
   display: grid;
+  width: 100%;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 0px 0px;
