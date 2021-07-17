@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styled from "styled-components/macro";
+import styled, { keyframes } from "styled-components/macro";
 import { Logo, Hamburger } from "./reusable/Images";
 import MobileMenu from "./MobileMenu";
 import { menuItems } from "../utils/Constants";
@@ -8,13 +8,13 @@ const LogoWrap = styled.div`
   display: flex;
   align-items: center;
   width: 30%;
-  @media (max-width: 768px) {
+  @media (max-width: 770px) {
     width: 70%;
   }
 `;
 
 const HamburgerButton = styled.button`
-  @media (min-width: 768px) {
+  @media (min-width: 770px) {
     display: none;
   }
   background-color: transparent;
@@ -36,14 +36,14 @@ const Nav = styled.header`
 const Menu = styled.div`
   display: flex;
   align-items: center;
-  @media (max-width: 768px) {
+  @media (max-width: 770px) {
     display: none;
   }
 `;
 
 const MenuItem = styled.h4<{ selected?: boolean }>`
   color: var(--white);
-  font-family: 'Barlow', sans-serif;
+  font-family: "Barlow", sans-serif;
   &:not(:last-child) {
     padding-right: 2rem;
   }
@@ -62,6 +62,19 @@ const MenuItem = styled.h4<{ selected?: boolean }>`
       `}
 `;
 
+const showMenu = keyframes`
+  from { top: 5.8rem; }
+  to { top: 6rem; }
+`;
+
+const ExtendedMobileMenu = styled(MobileMenu)`
+  position: absolute;
+  /* top: 6rem; */
+  left: 0;
+  right: 0;
+  animation: ${showMenu} 0.2s linear forwards;
+`;
+
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -77,10 +90,14 @@ const Navbar = () => {
           </MenuItem>
         ))}
       </Menu>
-      <HamburgerButton onClick={() => setMobileMenuOpen((prevOpenMenuState) => !prevOpenMenuState)}>
+      <HamburgerButton
+        onClick={() =>
+          setMobileMenuOpen((prevOpenMenuState) => !prevOpenMenuState)
+        }
+      >
         <Hamburger />
       </HamburgerButton>
-      <MobileMenu items={menuItems} isOpen={mobileMenuOpen}/>
+      <ExtendedMobileMenu items={menuItems} isOpen={mobileMenuOpen} />
     </Nav>
   );
 };

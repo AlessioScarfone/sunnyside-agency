@@ -22,7 +22,7 @@ const Container = styled.div`
 
 const MainGridContainer = styled.div`
   max-width: 100%;
-  @media (min-width: 768px) {
+  @media (min-width: 770px) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
@@ -37,7 +37,7 @@ const TestimonialSectionContainer = styled.div`
   .inner-container {
     display: flex;
     flex-direction: column;
-    @media (min-width: 768px) {
+    @media (min-width: 770px) {
       flex-direction: row;
     }
   }
@@ -59,7 +59,7 @@ const ImageGallery = styled.div`
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 0px 0px;
-  @media (min-width: 768px) {
+  @media (min-width: 770px) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
   }

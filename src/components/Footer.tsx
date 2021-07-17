@@ -31,8 +31,8 @@ const LinkRowContainer = styled.div`
   padding: 2rem 1rem 1rem 1rem;
   max-width: 100%;
 
-  @media (min-width: 768px) {
-    max-width: 50%;
+  @media (min-width: 770px) {
+    max-width: 30%;
   }
 `;
 
@@ -41,9 +41,6 @@ const FooterLink = styled.p`
 `;
 
 const IconRowContainer = styled.div`
-  /* display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  column-gap: 2rem; */
   display: flex;
   justify-content: space-evenly;
   width: 100%;
@@ -52,8 +49,8 @@ const IconRowContainer = styled.div`
   padding-right: 1rem;
   max-width: 100%;
 
-  @media (min-width: 768px) {
-    max-width: 50%;
+  @media (min-width: 770px) {
+    max-width: 30%;
   }
 `;
 

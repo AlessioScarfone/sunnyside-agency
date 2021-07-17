@@ -36,7 +36,7 @@ const Text = styled.p<{ textColor: string }>`
 const ResponsiveImageWithText = ({
   smallSrc,
   largeSrc,
-  mediaSize = 768,
+  mediaSize = 770,
   alt = "img",
   title,
   text,
@@ -44,7 +44,7 @@ const ResponsiveImageWithText = ({
 }: ResponsiveImageWithTextProps) => {
   return (
     <Container>
-      <ResponsiveImage smallSrc={smallSrc} largeSrc={largeSrc} />
+      <ResponsiveImage smallSrc={smallSrc} largeSrc={largeSrc} alt={alt} mediaSize={mediaSize}/>
       <Title textColor={textColor}>{title}</Title>
       <Text textColor={textColor}>{text}</Text>
     </Container>

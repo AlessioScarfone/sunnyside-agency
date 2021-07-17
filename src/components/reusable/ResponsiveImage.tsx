@@ -8,11 +8,11 @@ export interface ResponsiveImageProps {
   alt?: string;
 }
 
-const Image = styled.img<{ mediaSize?: number }>`
+const Image = styled.img<{ mediaSize: number }>`
   display: none;
-  max-width: 100%;
+  width: 100%;
   height: auto;
-  object-fit: fill;
+  object-fit: cover;
 `;
 
 const MediaImgSmall = styled(Image)`
@@ -22,28 +22,27 @@ const MediaImgSmall = styled(Image)`
 `;
 
 const MediaImgBig = styled(Image)`
-  @media (min-width: ${(props) => props.mediaSize}px) {
+  @media (min-width: ${(props) => props.mediaSize + 1}px) {
     display: block;
   }
+`;
+
+const ImgContainer = styled.div`
+  width: 100%;
 `;
 
 const ResponsiveImage = ({
   smallSrc,
   largeSrc,
-  mediaSize = 768,
+  mediaSize = 770,
   alt = "img",
 }: ResponsiveImageProps) => {
   return (
-    <>
+    <ImgContainer>
       <MediaImgSmall src={smallSrc} alt={alt} mediaSize={mediaSize} />
       <MediaImgBig src={largeSrc} alt={alt} mediaSize={mediaSize} />
-    </>
+    </ImgContainer>
 
-    // <picture>
-    //     <source media="(max-width: 768px)" src={smallSrc}/>
-    //     <source media="(min-width: 768px)" src={largeSrc}/>
-    //     <img src={largeSrc} alt={alt}/>
-    // </picture>
   );
 };
 

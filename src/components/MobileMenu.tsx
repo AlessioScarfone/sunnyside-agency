@@ -1,5 +1,5 @@
 import React from "react";
-import styled, {keyframes} from "styled-components/macro";
+import styled from "styled-components/macro";
 import MenuItemElemModel from "../utils/MenuItemElem.model";
 
 interface MobileMenuProps {
@@ -7,11 +7,6 @@ interface MobileMenuProps {
   isOpen: boolean;
   className?: string;
 }
-
-const showMenu = keyframes`
-  from { top: 5.8rem; }
-  to { top: 6rem; }
-`;
 
 const Triangle = styled.div`
   z-index: 999;
@@ -31,11 +26,6 @@ const Wrapper = styled.div<{ isOpen: boolean }>`
   ${(props) => (props.isOpen ? `display: flex` : `display: none`)};
   justify-content: center;
   width: 100%;
-  position: absolute;
-  /* top: 6rem; */
-  left: 0;
-  right: 0;
-  animation: ${showMenu} 0.2s linear forwards;
 `;
 
 const MobileMenuContainer = styled.div`
@@ -76,7 +66,7 @@ const MobileMenuItem = styled.h4<{ selected?: boolean }>`
 
 const MobileMenu = ({ items, isOpen, className }: MobileMenuProps) => {
   return (
-    <Wrapper isOpen={isOpen}>
+    <Wrapper isOpen={isOpen} className={className}>
       <MobileMenuContainer>
         <Triangle />
         {items.map((i) => (
