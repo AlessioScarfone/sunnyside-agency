@@ -9,9 +9,9 @@ import {
 } from "./reusable/Images";
 
 const StyledFooter = styled.footer`
-  background-color: var(--moderateDarkCyan);
+  background-color: var(--fixCyan);
   width: 100%;
-  padding: 3rem;
+  padding: 4rem 3rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -24,10 +24,37 @@ const StyledCyanIconWrapper = styled.div`
   }
 `;
 
+const LinkRowContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 2rem 1rem 1rem 1rem;
+  max-width: 100%;
+
+  @media (min-width: 768px) {
+    max-width: 50%;
+  }
+`
+
 const IconRowContainer = styled.div`
-  display: grid;
+  /* display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  column-gap: 3rem;
+  column-gap: 2rem; */
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  padding-top: 3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  max-width: 100%;
+
+  @media (min-width: 768px) {
+    max-width: 50%;
+  }
+`;
+
+const FooterLink = styled.p`
+  color: var(--darkCyan)
 `;
 
 const Footer = () => {
@@ -35,6 +62,13 @@ const Footer = () => {
     <StyledCyanIconWrapper>
       <StyledFooter>
         <Logo />
+
+        <LinkRowContainer>
+          <FooterLink>About</FooterLink>
+          <FooterLink>Services</FooterLink>
+          <FooterLink>Projects</FooterLink>
+        </LinkRowContainer>
+
         <IconRowContainer>
           <FacebookIcon />
           <InstagramIcon />

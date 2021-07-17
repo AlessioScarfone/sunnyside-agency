@@ -10,6 +10,7 @@ const globalRules = `
     --yellow: hsl(51, 100%, 49%);
     --darkCyan: hsl(167, 40%, 24%);
     --moderateDarkCyan: hsl(168, 34%, 41%);
+    --fixCyan: #8BD0C1;
     --darkBlue: hsl(198, 62%, 26%);
     --veryDarkBlue:  hsl(212, 27%, 19%);
     --darkGrayishBlue: hsl(232, 10%, 55%);

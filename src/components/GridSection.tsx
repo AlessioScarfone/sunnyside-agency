@@ -21,6 +21,7 @@ const Container = styled.div`
 `;
 
 const MainGridContainer = styled.div`
+  max-width: 100%;
   @media (min-width: 768px) {
     display: grid;
     grid-template-columns: 1fr 1fr;

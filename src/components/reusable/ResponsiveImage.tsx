@@ -1,5 +1,5 @@
 import React from "react";
-import styled from 'styled-components/macro';
+import styled from "styled-components/macro";
 
 export interface ResponsiveImageProps {
   smallSrc: string;
@@ -8,23 +8,23 @@ export interface ResponsiveImageProps {
   alt?: string;
 }
 
-
-const MediaImgSmall = styled.img<{mediaSize?: number}>`
+const Image = styled.img<{ mediaSize?: number }>`
   display: none;
-  @media (max-width: ${(props) => props.mediaSize}px) {
-    display: block;
-  }
-  width: 100%; 
+  max-width: 100%;
+  height: auto;
   object-fit: fill;
 `;
 
-const MediaImgBig = styled.img<{mediaSize?: number}>`
-  display: none;
+const MediaImgSmall = styled(Image)`
+  @media (max-width: ${(props) => props.mediaSize}px) {
+    display: block;
+  }
+`;
+
+const MediaImgBig = styled(Image)`
   @media (min-width: ${(props) => props.mediaSize}px) {
     display: block;
   }
-  width: 100%; 
-  object-fit: fill;
 `;
 
 const ResponsiveImage = ({
@@ -33,11 +33,10 @@ const ResponsiveImage = ({
   mediaSize = 768,
   alt = "img",
 }: ResponsiveImageProps) => {
-
   return (
     <>
-      <MediaImgSmall src={smallSrc} alt={alt} mediaSize={mediaSize}/>
-      <MediaImgBig src={largeSrc} alt={alt} mediaSize={mediaSize}/>
+      <MediaImgSmall src={smallSrc} alt={alt} mediaSize={mediaSize} />
+      <MediaImgBig src={largeSrc} alt={alt} mediaSize={mediaSize} />
     </>
 
     // <picture>
