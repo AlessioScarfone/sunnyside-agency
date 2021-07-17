@@ -1,4 +1,5 @@
 import { imgEmily, imgJennie, imgThomas } from '../components/reusable/Images';
+import MenuItemElemModel from './MenuItemElem.model';
 
 export const textSectionData: Array<{ title: string, text: string, link?: string }> = [
     {
@@ -43,4 +44,23 @@ export const testimonialData: Array<{ id: string, image: any, text: string, name
         name: "Thomas S.",
         desc: "Chief Operating Officer"
     }
+]
+
+export const menuItems: MenuItemElemModel[] = [
+    {
+        text: "About",
+        selected: false
+    },
+    {
+        text: "Services",
+        selected: false
+    },
+    {
+        text: "Projects",
+        selected: false
+    },
+    {
+        text: "Contact",
+        selected: true
+    },
 ]

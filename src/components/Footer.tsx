@@ -34,7 +34,11 @@ const LinkRowContainer = styled.div`
   @media (min-width: 768px) {
     max-width: 50%;
   }
-`
+`;
+
+const FooterLink = styled.p`
+  color: var(--darkCyan)
+`;
 
 const IconRowContainer = styled.div`
   /* display: grid;
@@ -51,10 +55,6 @@ const IconRowContainer = styled.div`
   @media (min-width: 768px) {
     max-width: 50%;
   }
-`;
-
-const FooterLink = styled.p`
-  color: var(--darkCyan)
 `;
 
 const Footer = () => {
