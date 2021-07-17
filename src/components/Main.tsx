@@ -1,7 +1,7 @@
 import React from 'react';
 import ResponsiveImage from './reusable/ResponsiveImage';
 import { headerImg, ArrowDownIcon } from './reusable/Images';
-import styled from 'styled-components/macro';
+import styled, {keyframes} from 'styled-components/macro';
 import GridSection from './GridSection';
 import Navbar from './Navbar';
 import Footer from './Footer';
@@ -20,15 +20,22 @@ const FloatTitle = styled.h1`
   font-family: 'Fraunces', serif;
   font-size: clamp(1.8rem, 8vw - 2rem, 3rem);
   width: 100%;
-  padding: 1.5rem;
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
   text-align: center;
   font-weight: 900;
   letter-spacing: 4px;
 `;
 
+const arrowAnimation = keyframes`
+  0% { top: 3rem }
+  50% { top: 4rem; }
+  100% { top: 3rem; }
+`;
+
 const StyledArrowDownIcon = styled(ArrowDownIcon)`
   position: relative;
   top: 4rem;
+  animation: ${arrowAnimation} 2s ease-in-out infinite;
 
   @media (mix-width: 367px) {
     transform: scale(1.3);
