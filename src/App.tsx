@@ -5,7 +5,7 @@ import SourceBadge from './components/source-badge/SourceBadge';
 function App() {
   return <>
     <Main />
-    <SourceBadge url="https://github.com/AlessioScarfone"/>
+    <SourceBadge url="https://github.com/AlessioScarfone/sunnyside-agency"/>
   </>;
 }
 
