@@ -44,7 +44,7 @@ const TestimonialSection = ({
 }: TestimonialSectionProps) => {
   return (
     <TestimonialSectionContainer>
-      <TestimonialImg src={image} />
+      <TestimonialImg src={image}  alt="testimonil-img"/>
       <TestimonialText>{text}</TestimonialText>
       <TestimonialName>{name}</TestimonialName>
       {desc && <TestimonialDesc>{desc}</TestimonialDesc>}

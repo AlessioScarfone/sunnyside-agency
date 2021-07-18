@@ -35,7 +35,7 @@ const SourceBadgeContainer = styled.a<{ show: boolean }>`
   }
 `;
 
-const CloseButton = styled.button`
+const CloseButton = styled.a`
   position: absolute;
   left: -36px;
   top: 14px;

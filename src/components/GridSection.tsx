@@ -32,6 +32,8 @@ const MainGridContainer = styled.div`
 const TestimonialSectionContainer = styled.div`
   display: flex;
   flex-direction: column;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
 
   /* testimonial section container */
   .inner-container {
@@ -47,7 +49,6 @@ const TestimonialSectionTitle = styled.h2`
   width: 100%;
   color: var(--grayishBlue);
   text-align: center;
-  padding-top: 3rem;
   font-size: 1.2rem;
   letter-spacing: 2px;
   padding-bottom: 1rem;

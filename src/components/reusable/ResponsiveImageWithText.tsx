@@ -18,7 +18,7 @@ const Title = styled.h2<{ textColor: string }>`
   width: 100%;
   text-align: center;
   bottom: 30%;
-  font-size: 1.7rem;
+  font-size: clamp(1.7rem, 8vw - 2rem, 2.5rem);
   padding: 1.5rem 2rem;
   color: var(${(props) => props.textColor}, hsl(212, 27%, 19%));
 `;
@@ -28,9 +28,14 @@ const Text = styled.p<{ textColor: string }>`
   width: 100%;
   text-align: center;
   bottom: 15%;
-  padding: 1rem 2rem 0rem 2rem;
+  padding: 1rem 3rem 0rem 3rem;
   line-height: 1.5rem;
   color: var(${(props) => props.textColor}, hsl(212, 27%, 19%));
+
+  @media (min-width: 770px) {
+    padding-right: 5rem;
+    padding-left: 5rem;
+  }
 `;
 
 const ResponsiveImageWithText = ({

@@ -20,14 +20,14 @@ const Container = styled.div<{ linkColor?: string }>`
   min-height: 350px;
 
   h1 {
-    font-size: 2rem;
+    font-size: clamp(2rem, 8vw - 2rem, 3rem);
     padding-bottom: 1.5rem;
     color: var(--veryDarkBlue);
   }
 
   p {
-    color: var(--grayishBlue);
-    padding-bottom: 1.5rem;
+    color: var(--veryDarkGrayishBlue);
+    padding-bottom: clamp(1.5rem, 8vw - 2rem, 2rem);
   }
 
   span {

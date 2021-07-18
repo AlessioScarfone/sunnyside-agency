@@ -12,7 +12,7 @@ const FloatTitleContainer = styled.div`
   align-items: center;
   width: 100%;
   position: absolute;
-  top: 4.5rem;
+  top: 15vh;
 `;
 
 const FloatTitle = styled.h1`
@@ -46,7 +46,7 @@ const Main = () => {
   return (
     <>
       <Navbar />
-      <main>
+      <>
         <FloatTitleContainer>
           <FloatTitle> WE ARE CREATIVES </FloatTitle>
           <StyledArrowDownIcon />
@@ -59,7 +59,7 @@ const Main = () => {
           />
         </div>
         <GridSection />
-      </main>
+      </>
       <Footer />
     </>
   );

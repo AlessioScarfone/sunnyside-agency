@@ -7,9 +7,13 @@ import { menuItems } from "../utils/Constants";
 const LogoWrap = styled.div`
   display: flex;
   align-items: center;
-  width: 30%;
-  @media (max-width: 770px) {
-    width: 70%;
+  width: 70%;
+  @media (min-width: 770px) {
+    width: 30%;
+    svg {
+      transform: scale(1.5);
+      transform-origin: left;
+    }
   }
 `;
 
@@ -54,7 +58,7 @@ const MenuItem = styled.h4<{ selected?: boolean }>`
     `
         color:  var(--veryDarkBlue);
         background-color:  var(--white);
-        padding: 1rem 1.5rem;
+        padding: 0.9rem 1.2rem;
         text-align: center;
         border-radius: 30px;
         text-transform: uppercase;
