@@ -20,9 +20,10 @@ const Container = styled.div<{ linkColor?: string }>`
   min-height: 350px;
 
   h1 {
-    font-size: clamp(2rem, 8vw - 2rem, 3rem);
+    font-size: clamp(2rem, 8vw - 2rem, 2.6rem);
     padding-bottom: 1.5rem;
     color: var(--veryDarkBlue);
+    text-align: center;
   }
 
   p {
