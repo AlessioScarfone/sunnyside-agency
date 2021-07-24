@@ -9,7 +9,7 @@ export const textSectionData: Array<{ title: string, text: string, link?: string
     },
     {
         title: "Stand out to the right audience",
-        text: "Using a collaborative formula of designers, researchers,photographers,videographers,and copywriters,we’ll build and extend your brand in digital places.",
+        text: "Using a collaborative formula of designers, researchers, photographers, videographers and copywriters, we’ll build and extend your brand in digital places.",
         link: 'Learn more'
     },
     {

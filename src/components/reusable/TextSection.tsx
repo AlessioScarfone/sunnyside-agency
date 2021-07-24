@@ -17,6 +17,10 @@ const Container = styled.div<{ linkColor?: string }>`
   padding: 3rem;
   max-width: 100%;
   min-height: 350px;
+  
+  @media (min-width: 770px) {
+    padding: 6rem;
+  }
 
   h1 {
     font-size: clamp(2rem, 8vw - 2rem, 2.6rem);
