@@ -13,7 +13,7 @@ const Container = styled.div<{ linkColor?: string }>`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   padding: 3rem;
   max-width: 100%;
   min-height: 350px;
@@ -39,6 +39,7 @@ const Container = styled.div<{ linkColor?: string }>`
     font-weight: bold;
     font-family: "Fraunces", serif;
     color: var(--veryDarkBlue);
+    width: fit-content;
 
     &:before {
       content: "";
