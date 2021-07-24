@@ -16,14 +16,12 @@ const Container = styled.div<{ linkColor?: string }>`
   align-items: center;
   padding: 3rem;
   max-width: 100%;
-  text-align: center;
   min-height: 350px;
 
   h1 {
     font-size: clamp(2rem, 8vw - 2rem, 2.6rem);
     padding-bottom: 1.5rem;
     color: var(--veryDarkBlue);
-    text-align: center;
   }
 
   p {
